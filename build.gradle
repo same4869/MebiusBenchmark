@@ -11,7 +11,7 @@ buildscript {
     }
     dependencies {
         //其中sora_publish_notify_plugin为 "com.mihoyo.sora:build-plugin:0.0.4"
-        classpath com.pokemon.mebius.framework.buildsrc.Dependencies.mebius_publish_notify_plugin
+//        classpath com.pokemon.mebius.framework.buildsrc.Dependencies.mebius_publish_notify_plugin
     }
 }
 

@@ -4,7 +4,8 @@ import com.pokemon.mebius.framework.buildsrc.Dependencies
 plugins {
     id("com.android.library")
     id("org.jetbrains.kotlin.android")
-    id("com.pokemon.hikari.upload.plugin")
+//    id("com.pokemon.hikari.upload.plugin")
+    id("maven-publish")
 }
 
 android {
@@ -34,7 +35,24 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
+
+    //发布jitpack用的，私有仓库用自己的那个插件
+    afterEvaluate {
+        publishing {
+            publications {
+                create<MavenPublication>("release") {
+                    from(components["release"])
+                    groupId = "com.pokemon.mebius"
+                    artifactId = "benchmark"
+                    version = "0.0.1"
+                }
+            }
+        }
+    }
+
 }
+
+
 
 dependencies {
     implementation(AndroidX.core_ktx)
