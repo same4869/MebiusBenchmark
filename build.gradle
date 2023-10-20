@@ -8,6 +8,7 @@ buildscript {
             allowInsecureProtocol true
         }
         mavenCentral()
+        google()
     }
     dependencies {
         //其中sora_publish_notify_plugin为 "com.mihoyo.sora:build-plugin:0.0.4"
