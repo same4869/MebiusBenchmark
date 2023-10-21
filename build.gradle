@@ -3,10 +3,10 @@ import com.pokemon.mebius.framework.buildsrc.*
 
 buildscript {
     repositories {
-        maven {
-            url uri(Repos.maven_repo)
-            allowInsecureProtocol true
-        }
+//        maven {
+//            url uri(Repos.maven_repo)
+//            allowInsecureProtocol true
+//        }
         mavenCentral()
         google()
     }
